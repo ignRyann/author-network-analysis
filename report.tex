@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{mathrsfs, bm}
+\usepackage{enumitem}
+
+\usepackage[square]{natbib}              
+\setlength{\bibsep}{0.0pt}
+
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    citecolor={blue!50!black},
+}
+
+\begin{document}
+\title{COMP0123: Complex Networks and Webs Coursework 1 Report}
+\author{Roman Ryan Karim}
+\date{October 24, 2023}
+\maketitle
+
+\section*{Task 1 - (15 marks)}
+
+\fbox{%
+  \parbox{1\textwidth}{%
+  \begin{itemize}
+	\item Calculate the average node degree and the maximum node degree of the 3 networks.
+	\item Plot their degree distribution $P(k)$ on linear-linear scale and log-log scale, respectively.
+	\item Estimate the power-law exponent of the degree distribution $P(k)$ of the author network only.
+	\begin{itemize}
+		\item You can fit a curve by using the function polyfit from the numpy library.
+		\item Ideally, you can do the fitting on CCDF (the complementary cumulative distribution function) on log-log scale.
+	\end{itemize}
+	\item Briefly discuss your results, e.g. difference of the networks.
+\end{itemize}}%
+}
+
+\section*{Task 2 - (15 marks)}
+\fbox{%
+  \parbox{1\textwidth}{%
+  \begin{itemize}
+	\item Calculate and plot the nearest neighbour's average degree $k_{nn}$ as a function of degree $k$, on log-log scale.
+	\item Calculate the assotative coefficient of the networks.
+	\item Briefly discuss your results
+\end{itemize}
+  }%
+}
+
+\section*{Task 3 - (15 marks)}
+\fbox{%
+  \parbox{1\textwidth}{%
+  	\begin{itemize}
+	\item Calculate the diameter and the average shortest path length of the network
+	\item Calculate and plot the average node between of $k$-degree nodes as a function of node degree $k$, where node betweenness is normalised, on log-log scale.
+	\item Briefly discuss your results.
+\end{itemize}
+  }%
+}
+
+\section*{Task 4 - (15 marks)}
+
+\fbox{%
+  \parbox{1\textwidth}{%
+  \begin{itemize}
+	\item Calculate and plot the rich-club coefficient as a function of node rank on log-log scale
+	\item Calculate and plot the rich-club coefficient as a function of node degree on log-log scale
+	\item Briefly discuss your result
+\end{itemize}
+
+  }%
+}
+
+\section*{Task 5 - (15 marks)}
+\fbox{%
+  \parbox{1\textwidth}{%
+  	\begin{itemize}
+	\item Obtain the community structure (with the largest modularity value) of the 3 networks
+	\item Give the number of communities and the size (i.e. number of nodes) of the top 3 largest communities in each netwoork.
+	\item Visualise the network and show each community with a different colour.
+	\item Briefly discuss your result
+\end{itemize}
+  }%
+}
+
+\section*{Task 6 - (25 marks)}
+
+\fbox{%
+	\parbox{1\textwidth}{%
+	\begin{itemize}
+	\item Randomly rewire the 3 networks while preserving the degree distribution; and obtain the maximal random case of each network
+	\item For the 3 randomised networks, plot their degree distribution
+	\item Calculate the average clustering coefficient, the assortative coefficient, and the average shortest path length of the 3 networks and the 3 randomised networks; show and compare the results in a table
+	\item Briefly discuss you result.
+\end{itemize}
+	}%
+}
+
+
+
+\bibliographystyle{acm}
+\bibliography{references}
+
+\end{document}
