@@ -1,22 +1,18 @@
 \documentclass[11pt]{article}
 \usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 \usepackage{url}
-\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{mathrsfs, bm}
 \usepackage{enumitem}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
-\usepackage[square]{natbib}              
-\setlength{\bibsep}{0.0pt}
-
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    citecolor={blue!50!black},
-}
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
 
 \begin{document}
-\title{COMP0123: Complex Networks and Webs Coursework 1 Report}
+\title{COMP0123 Complex Networks and Webs Coursework 1 Report}
 \author{Roman Ryan Karim}
 \date{October 24, 2023}
 \maketitle
@@ -37,16 +33,61 @@
 \end{itemize}}%
 }
 
+\paragraph{}The average node degree is given by $\bar{k} = \frac{1}{N}\sum^{N}_{i = 1} = \frac{2E}{N}$. Given that all 3 of our networks (author network, random network \& BA network) have 2,068 unique nodes and 5,163 unique links;  $\bar{k} = \frac{2(5163)}{2068} = 4.99$ (2 d.p.).
+
+\begin{center}
+\begin{tabular}{ | m{12em} | m{12em} | m{12em} | } 
+  \hline
+  \textbf{Networks} & \textbf{Average Node Degree} & \textbf{Maximum Node Degree}\\
+  \hline 
+  Author Network & 4.99 & 51 \\ 
+  \hline
+  Random Network & 4.99 & 13 \\ 
+  \hline
+  BA Network & 4.99 & 48 \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Plot_Degree_Distribution.jpeg}
+    \label{fig:Plot_Degree_Distribution}
+\end{figure}
+
+\paragraph{}We estimate the power-law exponent to be $\alpha = 2.01$ for the author network.
+
 \section*{Task 2 - (15 marks)}
 \fbox{%
   \parbox{1\textwidth}{%
   \begin{itemize}
 	\item Calculate and plot the nearest neighbour's average degree $k_{nn}$ as a function of degree $k$, on log-log scale.
-	\item Calculate the assotative coefficient of the networks.
+	\item Calculate the assortative coefficient of the networks.
 	\item Briefly discuss your results
 \end{itemize}
   }%
 }
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{nearest_neighbours_average_degree.png}
+    \label{fig:Plot_Degree_Distribution}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{ | m{15em} | m{15em} | } 
+  \hline
+  \textbf{Networks} & \textbf{Assortative Coefficient} \\
+  \hline 
+  Author Network & \ \ 0.47 \\ 
+  \hline
+  Random Network & \ \ 0.01 \\ 
+  \hline
+  BA Network & - 0.16 \\
+  \hline
+\end{tabular}
+\end{center}
+
 
 \section*{Task 3 - (15 marks)}
 \fbox{%
@@ -59,8 +100,9 @@
   }%
 }
 
-\section*{Task 4 - (15 marks)}
 
+
+\section*{Task 4 - (15 marks)}
 \fbox{%
   \parbox{1\textwidth}{%
   \begin{itemize}
