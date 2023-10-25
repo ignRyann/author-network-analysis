@@ -51,8 +51,8 @@
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1\textwidth]{Plot_Degree_Distribution.jpeg}
-    \label{fig:Plot_Degree_Distribution}
+    \includegraphics[width=1\textwidth]{degree_distributions.png}
+    \label{fig:Degree_Distribution}
 \end{figure}
 
 \paragraph{}We estimate the power-law exponent to be $\alpha = 2.01$ for the author network.
@@ -71,7 +71,7 @@
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{nearest_neighbours_average_degree.png}
-    \label{fig:Plot_Degree_Distribution}
+    \label{fig:Nearest Neighbours Average Degree}
 \end{figure}
 
 \begin{center}
@@ -96,10 +96,29 @@
 	\item Calculate the diameter and the average shortest path length of the network
 	\item Calculate and plot the average node between of $k$-degree nodes as a function of node degree $k$, where node betweenness is normalised, on log-log scale.
 	\item Briefly discuss your results.
-\end{itemize}
+	\end{itemize}
   }%
 }
 
+\begin{center}
+	\begin{tabular}{ | m{11em} | m{11em} | m{13em} | } 
+  	\hline
+  	\textbf{Networks} & \textbf{Diameter} & \textbf{Avg Shortest Path Length}\\
+  	\hline 
+  	Author Network & 19 & 7.30 \\ 
+  	\hline
+  	Random Network & 10 & 4.93 \\ 
+  	\hline
+  	BA Network & 10 & 4.56 \\
+  	\hline
+	\end{tabular}
+\end{center}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{average_node_betweenness.png}
+    \label{fig:Averade Node Betweenness}
+\end{figure}
 
 
 \section*{Task 4 - (15 marks)}
@@ -110,9 +129,14 @@
 	\item Calculate and plot the rich-club coefficient as a function of node degree on log-log scale
 	\item Briefly discuss your result
 \end{itemize}
-
   }%
 }
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{rich_club.png}
+    \label{fig:Rich-Club Coefficient}
+\end{figure}
 
 \section*{Task 5 - (15 marks)}
 \fbox{%
@@ -139,6 +163,33 @@
 	}%
 }
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{degree_distributions_rewired}
+    \label{fig:Degree Distributions (Rewired Networks)}
+\end{figure}
+
+\begin{center}
+	\begin{tabular}{ | m{12em} | m{8em} | m{7em} | m{10em} | } 
+  	\hline
+  	\textbf{} & \textbf{Avg Clustering Coefficient} & \textbf{Assortative Coefficient} & \textbf{Avg Shortest Path Length} \\
+  	\hline 
+  	Author Network & 0.62 & \ 0.47 & 7.30 \\ 
+  	\hline
+  	Author Network (rewired) & 0.01 & \ 0.05 & 4.43 \\ 
+  	\hline
+  	Random Network & 0.00 & \ 0.01 & 4.93 \\
+  	\hline
+  	Random Network (rewired) & 0.00 & -0.03 & 4.94 \\
+  	\hline
+  	BA Network & 0.01 & -0.16 & 4.56 \\
+  	\hline
+  	BA Network (rewired) & 0.00 & -0.13 & 4.55 \\
+  	\hline
+	\end{tabular}
+\end{center}
+
+\paragraph{}
 
 
 \bibliographystyle{acm}
